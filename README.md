@@ -4,7 +4,7 @@ A small project made with React & Marvel API
 
 ## Live at:
 
-https://marvel-characters-db.vercel.app/
+https://marvel-characters-db-seven.vercel.app/
 
 ## Built with:
 
