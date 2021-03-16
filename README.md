@@ -25,7 +25,7 @@ https://marvel-characters-db-seven.vercel.app/
 - Http Service to manage all API requests
 - Sass variables in JS
 
-## USAGE
+## Usage
 
 Create .env file in root directory and add the following:
 
