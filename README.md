@@ -2,11 +2,11 @@
 
 A small project made with React & Marvel API
 
-## Live at:
+## Live at
 
 https://marvel-characters-db-seven.vercel.app/
 
-## Built with:
+## Built with
 
 - React
 - Marvel API
@@ -15,7 +15,7 @@ https://marvel-characters-db-seven.vercel.app/
 - React-router-dom
 - Axios
 
-## Features:
+## Features
 
 - React v17
 - Mobile first approach
@@ -25,7 +25,7 @@ https://marvel-characters-db-seven.vercel.app/
 - Http Service to manage all API requests
 - Sass variables in JS
 
-## USAGE:
+## USAGE
 
 Create .env file in root directory and add the following:
 
