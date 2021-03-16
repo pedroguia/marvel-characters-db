@@ -1,0 +1,45 @@
+@import "../../index.scss";
+
+.search-field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $input-color;
+  background-color: $input-background-color;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 3px 15px;
+
+  & input {
+    border: none;
+    color: $input-color;
+    background-color: $input-background-color;
+    margin-left: 10px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & button {
+    border: none;
+    color: $input-color;
+    background-color: $input-background-color;
+    border-radius: 50%;
+    padding: unset;
+    height: 20px;
+    width: 23px;
+    transition-property: all;
+    transition-duration: 0.2s;
+
+    &:hover {
+      color: $input-background-color;
+      background-color: $input-color;
+    }
+
+    & img {
+      vertical-align: unset;
+    }
+  }
+}

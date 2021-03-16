@@ -1,0 +1,40 @@
+@import "../../index.scss";
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  & .img {
+    width: 200px;
+
+    @include media-breakpoint-down(sm) {
+      order: 2;
+    }
+  }
+
+  & .text {
+    color: $input-color;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      order: 1;
+    }
+
+    & p:first-of-type {
+      font-size: 24px;
+      font-weight: bold;
+      color: $marvel-red;
+      margin-bottom: 0.6rem;
+    }
+
+    & p:last-of-type {
+      font-size: 16px;
+    }
+  }
+}

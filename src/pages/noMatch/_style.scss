@@ -1,0 +1,49 @@
+@import "../../index.scss";
+
+.no-match {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    padding: 70px;
+  }
+
+  & .img {
+    width: 450px;
+
+    @include media-breakpoint-down(sm) {
+      order: 2;
+      width: 300px;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 81px;
+    }
+  }
+
+  & .text {
+    color: $input-color;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      order: 1;
+    }
+
+    & p:first-of-type {
+      font-size: 24px;
+      font-weight: bold;
+      color: $marvel-red;
+      margin-bottom: 0.6rem;
+    }
+    & p:last-of-type {
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../index.scss";
+
+.pagination {
+  & .page-item {
+    & .page-link {
+      border: none;
+      background-color: transparent;
+      color: $input-color !important;
+
+      &:hover {
+        background-color: $input-background-color;
+        border: none;
+        border-radius: 0.5rem;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+    }
+
+    &:first-child {
+      & .page-link {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+    }
+
+    &:last-child {
+      & .page-link {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+
+    &.active {
+      & .page-link {
+        color: white !important;
+        background-color: $input-color !important;
+        border-color: $input-color !important;
+        border-radius: 0.5rem;
+      }
+    }
+
+    &.disabled {
+      & .page-link {
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}

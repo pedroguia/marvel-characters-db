@@ -1,0 +1,82 @@
+@import "../../index.scss";
+
+.resume-badge {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: $marvel-red;
+  color: white;
+  height: 70px;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  @extend .transition;
+  position: relative;
+  margin-bottom: 10px;
+
+  @include media-breakpoint-down(md) {
+    padding: 5px 25px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 10px 35px;
+  }
+
+  &::before,
+  &::after {
+    width: 0px;
+    height: 0px;
+    background: #fff;
+    content: "";
+    position: absolute;
+    @extend .transition;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-top: $squared-border-width solid transparent;
+    border-right: $squared-border-width solid $marvel-red;
+    border-left: $squared-border-width solid transparent;
+    border-bottom: $squared-border-width solid $marvel-red;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-top: $squared-border-width solid $marvel-red;
+    border-right: $squared-border-width solid transparent;
+    border-left: $squared-border-width solid $marvel-red;
+    border-bottom: $squared-border-width solid transparent;
+  }
+
+  & .text {
+    font-size: 20px;
+  }
+
+  & .count {
+    font-weight: bold;
+    font-size: 50px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 35px;
+    }
+  }
+
+  &:hover {
+    background-color: black;
+
+    &::before {
+      border-right-color: black;
+      border-bottom-color: black;
+    }
+
+    &::after {
+      border-top-color: black;
+      border-left-color: black;
+    }
+  }
+}

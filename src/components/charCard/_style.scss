@@ -1,0 +1,90 @@
+@import "../../index.scss";
+
+.char-card {
+  margin: 0 auto 30px auto;
+  background-color: white;
+  box-shadow: $card-box-shadow;
+  @extend .transition;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 25px 50px -12px #00000040;
+    transform: translateY(-10px);
+
+    & .name {
+      background-position: 0 100%;
+    }
+  }
+
+  & .thumbnail {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  & .name {
+    padding: 7px 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    width: 100%;
+    transition: background-color 0.1s linear;
+    text-transform: uppercase;
+    @extend .ellipsis;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, rgba(black, 0.6) 50%, rgba($marvel-red, 0.7) 50%);
+    transition: background-position 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  & .description {
+    padding: 13px 15px 15px 15px;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    border-top: 1px solid rgba($marvel-red, 0.7);
+    overflow: hidden;
+
+    &.line-clamp {
+      position: relative;
+      max-height: 4.3em;
+
+      &:after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        height: auto;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+
+        @supports (-webkit-line-clamp: 3) {
+          display: none;
+        }
+      }
+
+      @supports (-webkit-line-clamp: 2) {
+        max-height: 4.3em;
+        height: auto;
+        @extend .ellipsis-multi-line;
+
+        &.line-clamp:after {
+          display: none;
+        }
+      }
+    }
+
+    & > div {
+      &.placeholder {
+        font-style: italic;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+}

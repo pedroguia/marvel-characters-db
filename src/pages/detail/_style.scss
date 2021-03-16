@@ -1,0 +1,117 @@
+@import "../../index.scss";
+
+.detail {
+  margin: $detail-margin-y 260px;
+
+  @include media-breakpoint-down(lg) {
+    margin: $detail-margin-y 160px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: $detail-margin-y 100px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: $detail-margin-y 20px;
+  }
+
+  & .back-button {
+    color: $input-color;
+    background-color: $input-background-color;
+    border-radius: 0.5rem;
+    padding: 3px 15px;
+    border: none;
+    margin-bottom: 10px;
+    @extend .transition;
+
+    &:hover {
+      background-color: $input-color;
+      color: $input-background-color;
+    }
+  }
+
+  & .detail-card {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: $card-box-shadow;
+    overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      height: unset;
+    }
+
+    & .portrait {
+      height: 100%;
+      width: 40%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 40%;
+      position: relative;
+
+      @include media-breakpoint-down(sm) {
+        height: 400px;
+        width: 100%;
+      }
+    }
+
+    & .info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px;
+      color: black;
+
+      @include media-breakpoint-down(sm) {
+        border-radius: 30px;
+        margin-top: -2rem;
+        z-index: 2;
+        background-color: white;
+      }
+
+      @include media-breakpoint-up(md) {
+        height: 100%;
+        width: 60%;
+        padding: 40px;
+      }
+
+      & .description {
+        font-weight: 300;
+
+        &.placeholder {
+          font-style: italic;
+        }
+      }
+
+      & h1 {
+        font-size: 60px;
+      }
+
+      & .badge-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 10px 0;
+
+        & .badge {
+          margin-right: 3px;
+          display: flex;
+          align-items: center;
+
+          & img {
+            margin-left: 5px;
+          }
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

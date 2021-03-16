@@ -1,0 +1,16 @@
+@import "../../index.scss";
+
+.custom-button {
+  color: $input-color;
+  background-color: $input-background-color;
+  border-radius: 0.5rem;
+  padding: 3px 15px;
+  border: none;
+  margin-bottom: 10px;
+  @extend .transition;
+
+  &:hover {
+    background-color: $input-color;
+    color: $input-background-color;
+  }
+}
