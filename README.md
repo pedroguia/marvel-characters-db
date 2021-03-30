@@ -37,7 +37,7 @@ Install dependencies:
 yarn
 ```
 
-Start dev server
+Start dev server:
 ```
 yarn start
 ```
