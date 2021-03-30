@@ -28,12 +28,16 @@ https://marvel-characters-db-seven.vercel.app/
 ## Usage
 
 Create .env file in root directory and add the following:
-
 ```
 REACT_APP_PUBLIC_API_KEY={your-marvel-api-key}
 ```
 
+Install dependencies:
 ```
 yarn
+```
+
+Start dev server
+```
 yarn start
 ```
